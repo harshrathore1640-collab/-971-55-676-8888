@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoo Loong Kan Hot Pot | Chinatown, Dubai Mall</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#990000',
+                            darkred: '#660000',
+                            gold: '#D4AF37',
+                            lightgold: '#F3E5AB',
+                            dark: '#0F0F0F',
+                            card: '#1A1A1A',
+                            charcoal: '#141414'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for general icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F0F0F;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 15, 15, 0.75), rgba(15, 15, 15, 0.85)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-100 font-sans antialiased selection:bg-brand-gold selection:text-black">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-red text-white text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide">
+        <i class="fa-solid fa-fire mr-2 text-brand-gold"></i> Chinatown, Dubai Mall • Rated 4.9/5 by 681+ Food Lovers • Open Daily till 1:00 AM
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-brand-gold/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo / Name -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-red to-brand-gold flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg shadow-brand-red/30">
+                    龙
+                </div>
+                <div>
+                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-white group-hover:text-brand-gold transition-colors">SHOO LOONG KAN</span>
+                    <span class="block text-[10px] tracking-widest text-brand-gold uppercase">Dubai Mall • Chinatown</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                <a href="#about" class="text-gray-300 hover:text-brand-gold transition-colors">About</a>
+                <a href="#menu" class="text-gray-300 hover:text-brand-gold transition-colors">Menu & Broths</a>
+                <a href="#experience" class="text-gray-300 hover:text-brand-gold transition-colors">Experience</a>
+                <a href="#reviews" class="text-gray-300 hover:text-brand-gold transition-colors">Reviews (4.9★)</a>
+                <a href="#contact" class="text-gray-300 hover:text-brand-gold transition-colors">Location</a>
+            </div>
+
+            <!-- Action Button -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="tel:+971556768888" class="bg-brand-gold hover:bg-brand-lightgold text-black px-5 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg shadow-brand-gold/20 flex items-center gap-2">
+                    <i class="fa-solid fa-calendar-check"></i> Reserve a Table
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none p-2">
+                <i class="fa-solid
