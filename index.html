@@ -1,92 +1,428 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoo Loong Kan Hot Pot | Chinatown, Dubai Mall</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Shoo Loong Kan Hot Pot | Chinatown Dubai Mall</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            red: '#990000',
-                            darkred: '#660000',
-                            gold: '#D4AF37',
-                            lightgold: '#F3E5AB',
-                            dark: '#0F0F0F',
-                            card: '#1A1A1A',
-                            charcoal: '#141414'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif']
+                        brandRed: '#b91c1c',
+                        brandDark: '#121212',
+                        brandGold: '#d4af37'
                     }
                 }
             }
         }
     </script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for general icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0F0F0F;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #D4AF37;
-            border-radius: 4px;
-        }
-        .hero-bg {
-            background: linear-gradient(rgba(15, 15, 15, 0.75), rgba(15, 15, 15, 0.85)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-        }
-    </style>
 </head>
-<body class="bg-brand-dark text-gray-100 font-sans antialiased selection:bg-brand-gold selection:text-black">
+<body class="bg-brandDark text-gray-100 font-sans antialiased selection:bg-brandRed selection:text-white">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-brand-red text-white text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide">
-        <i class="fa-solid fa-fire mr-2 text-brand-gold"></i> Chinatown, Dubai Mall • Rated 4.9/5 by 681+ Food Lovers • Open Daily till 1:00 AM
+    <!-- Top Notification Bar -->
+    <div class="bg-brandRed text-white text-xs md:text-sm py-2 px-4 text-center font-medium tracking-wide">
+        🔥 Experience Authentic Sichuan Hot Pot at Chinatown Dubai Mall | Open Daily until 1:00 AM
     </div>
 
     <!-- Navigation Bar -->
-    <nav class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-brand-gold/20 transition-all duration-300">
+    <nav class="sticky top-0 z-50 bg-brandDark/95 backdrop-blur border-b border-gray-800 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo / Name -->
-            <a href="#" class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-red to-brand-gold flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg shadow-brand-red/30">
-                    龙
+            <div class="flex items-center space-x-3">
+                <div class="bg-brandRed text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-red-900/50">
+                    龍
                 </div>
                 <div>
-                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-white group-hover:text-brand-gold transition-colors">SHOO LOONG KAN</span>
-                    <span class="block text-[10px] tracking-widest text-brand-gold uppercase">Dubai Mall • Chinatown</span>
+                    <span class="text-xl font-extrabold tracking-wider text-white">SHOO LOONG KAN</span>
+                    <span class="block text-xs text-brandGold tracking-widest font-semibold uppercase">Dubai Mall</span>
                 </div>
-            </a>
-
-            <!-- Desktop Navigation Links -->
-            <div class="hidden md:flex items-center space-x-8 font-medium text-sm">
-                <a href="#about" class="text-gray-300 hover:text-brand-gold transition-colors">About</a>
-                <a href="#menu" class="text-gray-300 hover:text-brand-gold transition-colors">Menu & Broths</a>
-                <a href="#experience" class="text-gray-300 hover:text-brand-gold transition-colors">Experience</a>
-                <a href="#reviews" class="text-gray-300 hover:text-brand-gold transition-colors">Reviews (4.9★)</a>
-                <a href="#contact" class="text-gray-300 hover:text-brand-gold transition-colors">Location</a>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#overview" class="hover:text-brandGold transition-colors">Overview</a>
+                <a href="#menu" class="hover:text-brandGold transition-colors">Menu & Highlights</a>
+                <a href="#reviews" class="hover:text-brandGold transition-colors">Reviews</a>
+                <a href="#location" class="hover:text-brandGold transition-colors">Location</a>
             </div>
 
-            <!-- Action Button -->
-            <div class="hidden lg:flex items-center space-x-4">
-                <a href="tel:+971556768888" class="bg-brand-gold hover:bg-brand-lightgold text-black px-5 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg shadow-brand-gold/20 flex items-center gap-2">
-                    <i class="fa-solid fa-calendar-check"></i> Reserve a Table
+            <div class="flex items-center space-x-3">
+                <a href="https://wa.me/971556768888?text=Hello%20Shoo%20Loong%20Kan%20Dubai%20Mall,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-4 py-2.5 rounded-full text-sm font-semibold flex items-center space-x-2 shadow-lg shadow-green-900/40 transition-all hover:scale-105">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>Reserve via WhatsApp</span>
                 </a>
             </div>
+        </div>
+    </nav>
 
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none p-2">
-                <i class="fa-solid
+    <!-- Hero Section -->
+    <header class="relative bg-black text-white overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&q=80&w=1920" alt="Hot Pot Background" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/60 to-transparent z-10"></div>
+        
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 flex flex-col items-start justify-center">
+            <div class="inline-flex items-center space-x-2 bg-brandRed/20 border border-brandRed/50 rounded-full px-4 py-1.5 text-brandGold text-sm font-semibold mb-6 backdrop-blur-md">
+                <i class="fa-solid fa-star text-brandGold"></i>
+                <span>4.9 / 5.0 Rating (681+ Verified Reviews)</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight mb-4 uppercase">
+                Shoo Loong Kan <span class="text-brandRed">Hot Pot</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mb-8 font-light">
+                Discover the ultimate traditional Sichuan hot pot experience located in Chinatown, Dubai Mall. Premium ingredients, authentic broths, and unforgettable hospitality.
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+                <a href="https://wa.me/971556768888?text=Hello,%20I%20would%20like%20to%20find%20a%20table%20at%20Shoo%20Loong%20Kan%20Dubai%20Mall." target="_blank" class="bg-brandRed hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-red-900/50 transition-all hover:scale-105 flex items-center space-x-3 text-base">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>Find & Book a Table</span>
+                </a>
+                <a href="#menu" class="bg-gray-800/80 hover:bg-gray-700 text-white font-semibold px-8 py-4 rounded-xl backdrop-blur-md border border-gray-700 transition-all text-base">
+                    Explore Menu
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-16 bg-neutral-900 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Info Cards -->
+                <div class="bg-neutral-800/60 p-6 rounded-2xl border border-gray-700/60 flex items-start space-x-4">
+                    <div class="bg-brandRed/20 text-brandRed p-3 rounded-xl text-xl">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Opening Hours</h3>
+                        <p class="text-gray-300 text-sm">Open Daily · Closes at 1:00 AM</p>
+                        <span class="inline-block mt-2 text-xs bg-green-500/20 text-green-400 font-medium px-2.5 py-1 rounded-md">Open Now</span>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-800/60 p-6 rounded-2xl border border-gray-700/60 flex items-start space-x-4">
+                    <div class="bg-brandRed/20 text-brandRed p-3 rounded-xl text-xl">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Average Price</h3>
+                        <p class="text-gray-300 text-sm">AED 100 – 300 per person</p>
+                        <span class="inline-block mt-2 text-xs text-gray-400">Reported by 255+ guests</span>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-800/60 p-6 rounded-2xl border border-gray-700/60 flex items-start space-x-4">
+                    <div class="bg-brandRed/20 text-brandRed p-3 rounded-xl text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Location</h3>
+                        <p class="text-gray-300 text-sm">Chinatown Dubai Mall, Sheikh Mohammed bin Rashid Blvd, Downtown Dubai</p>
+                        <a href="https://wa.me/971556768888?text=Hello,%20please%20send%20me%20directions%20to%20Shoo%20Loong%20Kan%20Dubai%20Mall." target="_blank" class="inline-block mt-2 text-xs text-brandGold font-semibold hover:underline">Get Directions via WhatsApp &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu & Highlights Section -->
+    <section id="menu" class="py-20 bg-brandDark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brandRed font-bold tracking-widest uppercase text-sm">Culinary Masterpieces</span>
+                <h2 class="text-3xl md:text-5xl font-black mt-2 mb-4">Popular Menu Highlights</h2>
+                <p class="text-gray-400">Handcrafted broths, premium cuts, and traditional Sichuan specialties prepared fresh daily.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Item 1 -->
+                <div class="bg-neutral-900 rounded-2xl overflow-hidden border border-gray-800 group hover:border-brandRed transition-all shadow-xl">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&q=80&w=800" alt="Dragon Hot Pot with Beef" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brandRed text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Popular</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Dragon Hot Pot with Beef</h3>
+                        <p class="text-gray-400 text-sm mb-4">Rich, aromatic broth paired with our signature succulent sliced beef selections.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-brandGold font-bold text-lg">Authentic Recipe</span>
+                            <a href="https://wa.me/971556768888?text=I%20would%20like%20to%20order%20Dragon%20Hot%20Pot%20with%20Beef." target="_blank" class="bg-green-600 hover:bg-green-500 text-white text-xs px-3.5 py-2 rounded-lg font-semibold flex items-center space-x-1.5 transition-all">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Order via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-neutral-900 rounded-2xl overflow-hidden border border-gray-800 group hover:border-brandRed transition-all shadow-xl">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800" alt="Thinly Sliced Marbled Beef" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brandRed text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Top Rated</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Thinly Sliced Marbled Beef</h3>
+                        <p class="text-gray-400 text-sm mb-4">Premium grade Australian marbled beef expertly sliced to melt in your mouth.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-brandGold font-bold text-lg">Chef's Choice</span>
+                            <a href="https://wa.me/971556768888?text=I%20would%20like%20to%20order%20Thinly%20Sliced%20Marbled%20Beef." target="_blank" class="bg-green-600 hover:bg-green-500 text-white text-xs px-3.5 py-2 rounded-lg font-semibold flex items-center space-x-1.5 transition-all">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Order via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-neutral-900 rounded-2xl overflow-hidden border border-gray-800 group hover:border-brandRed transition-all shadow-xl">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=800" alt="Spicy Sichuan Hot Pot Broth" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brandRed text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Signature</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Spicy Sichuan Hot Pot Broth</h3>
+                        <p class="text-gray-400 text-sm mb-4">Traditional spicy broth infused with authentic Sichuan peppercorns, chili, and spices.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-brandGold font-bold text-lg">Must Try</span>
+                            <a href="https://wa.me/971556768888?text=I%20would%20like%20to%20order%20Spicy%20Sichuan%20Hot%20Pot%20Broth." target="_blank" class="bg-green-600 hover:bg-green-500 text-white text-xs px-3.5 py-2 rounded-lg font-semibold flex items-center space-x-1.5 transition-all">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Order via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="bg-neutral-900 rounded-2xl overflow-hidden border border-gray-800 group hover:border-brandRed transition-all shadow-xl">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=800" alt="Shrimp Paste" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brandRed text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Fresh</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Handmade Shrimp Paste</h3>
+                        <p class="text-gray-400 text-sm mb-4>Freshly prepared shrimp paste offering incredible texture and oceanic flavor.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-brandGold font-bold text-lg">Daily Fresh</span>
+                            <a href="https://wa.me/971556768888?text=I%20would%20like%20to%20order%20Handmade%20Shrimp%20Paste." target="_blank" class="bg-green-600 hover:bg-green-500 text-white text-xs px-3.5 py-2 rounded-lg font-semibold flex items-center space-x-1.5 transition-all">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Order via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="bg-neutral-900 rounded-2xl overflow-hidden border border-gray-800 group hover:border-brandRed transition-all shadow-xl">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=800" alt="Hot Pot Feast Spread" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brandRed text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Combo</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Traditional Hot Pot Spread</h3>
+                        <p class="text-gray-400 text-sm mb-4">Complete feast featuring assorted meats, fresh vegetables, mushrooms, and dipping sauces.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-brandGold font-bold text-lg">Best Value</span>
+                            <a href="https://wa.me/971556768888?text=I%20would%20like%20to%20order%20Traditional%20Hot%20Pot%20Spread." target="_blank" class="bg-green-600 hover:bg-green-500 text-white text-xs px-3.5 py-2 rounded-lg font-semibold flex items-center space-x-1.5 transition-all">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Order via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="bg-neutral-900 rounded-2xl overflow-hidden border border-gray-800 group hover:border-brandRed transition-all shadow-xl">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800" alt="Jasmine Tea Panda Drink" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brandRed text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Special</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Jasmine Tea Panda Drink</h3>
+                        <p class="text-gray-400 text-sm mb-4">Refreshing signature beverage loved by our guests for balancing rich hot pot flavors.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-brandGold font-bold text-lg">Refreshing</span>
+                            <a href="https://wa.me/971556768888?text=I%20would%20like%20to%20order%20Jasmine%20Tea%20Panda%20Drink." target="_blank" class="bg-green-600 hover:bg-green-500 text-white text-xs px-3.5 py-2 rounded-lg font-semibold flex items-center space-x-1.5 transition-all">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Order via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-neutral-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-16">
+                <div>
+                    <span class="text-brandRed font-bold tracking-widest uppercase text-sm">Testimonials</span>
+                    <h2 class="text-3xl md:text-5xl font-black mt-2">What Our Guests Say</h2>
+                </div>
+                <div class="mt-6 md:mt-0 flex items-center space-x-4 bg-neutral-800 px-6 py-4 rounded-2xl border border-gray-700">
+                    <div class="text-3xl font-black text-brandGold">4.9</div>
+                    <div>
+                        <div class="flex text-brandGold text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">Based on 681+ Google Reviews</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-neutral-800/60 p-8 rounded-2xl border border-gray-700/60 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-brandGold text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6">"Probably one of the best restaurants in town! Definitely worth trying. Specially their signature barbecue and jasmine tea panda drink! Highly recommended!"</p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-gray-700 pt-4">
+                        <div>
+                            <h4 class="font-bold text-white text-sm">No Superpowers But I am Honest</h4>
+                            <span class="text-xs text-gray-400">Local Guide · 103 reviews</span>
+                        </div>
+                        <a href="https://wa.me/971556768888?text=Hello,%20I%20read%20great%20reviews%20and%20want%20to%20book%20a%20table." target="_blank" class="text-green-500 hover:text-green-400 text-sm font-semibold flex items-center space-x-1">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Book</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-neutral-800/60 p-8 rounded-2xl border border-gray-700/60 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-brandGold text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6">"Their food and service were absolutely excellent! There are hardly enough words to describe how good the authentic hot pot ingredients and traditional Chinese cuisine are."</p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-gray-700 pt-4">
+                        <div>
+                            <h4 class="font-bold text-white text-sm">R&T Cindy</h4>
+                            <span class="text-xs text-gray-400">Local Guide · 22 reviews</span>
+                        </div>
+                        <a href="https://wa.me/971556768888?text=Hello,%20I%20read%20great%20reviews%20and%20want%20to%20book%20a%20table." target="_blank" class="text-green-500 hover:text-green-400 text-sm font-semibold flex items-center space-x-1">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Book</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-neutral-800/60 p-8 rounded-2xl border border-gray-700/60 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-brandGold text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6">"Excellent as always! The food is great, the atmosphere is wonderful, and the service is outstanding too. Truly a world-class hot pot destination in Dubai."</p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-gray-700 pt-4">
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Jenny Wang</h4>
+                            <span class="text-xs text-gray-400">Local Guide · 15 reviews</span>
+                        </div>
+                        <a href="https://wa.me/971556768888?text=Hello,%20I%20read%20great%20reviews%20and%20want%20to%20book%20a%20table." target="_blank" class="text-green-500 hover:text-green-400 text-sm font-semibold flex items-center space-x-1">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Book</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="location" class="py-20 bg-brandDark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-neutral-900 rounded-3xl border border-gray-800 p-8 md:p-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-brandRed font-bold tracking-widest uppercase text-sm">Visit Us</span>
+                    <h2 class="text-3xl md:text-4xl font-black mt-2 mb-6">Shoo Loong Kan Hot Pot Dubai Mall</h2>
+                    
+                    <div class="space-y-4 mb-8 text-gray-300">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-brandRed mt-1 text-lg"></i>
+                            <p>Sheikh Mohammed bin Rashid Blvd - Burj Khalifa - Downtown Dubai - Dubai - United Arab Emirates (Located in Chinatown Dubai Mall)</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone text-brandRed text-lg"></i>
+                            <p>+971 52 896 8888</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-clock text-brandRed text-lg"></i>
+                            <p>Open Daily · Closes at 1:00 AM</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://wa.me/971556768888?text=Hello,%20I%20would%20like%20to%20inquire%20about%20table%20availability." target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-3.5 rounded-xl flex items-center space-x-2 transition-all shadow-lg shadow-green-900/40">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                        <a href="https://wa.me/971556768888?text=Hello,%20please%20send%20me%20live%20map%20directions." target="_blank" class="bg-brandRed hover:bg-red-700 text-white font-bold px-6 py-3.5 rounded-xl flex items-center space-x-2 transition-all shadow-lg shadow-red-900/40">
+                            <i class="fa-solid fa-directions text-xl"></i>
+                            <span>Get Directions</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden border border-gray-700 h-80 relative shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1000" alt="Restaurant Interior" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <a href="https://wa.me/971556768888?text=Hello,%20I%20want%20to%20reserve%20a%20table%20at%20Dubai%20Mall." target="_blank" class="bg-white/90 hover:bg-white text-brandDark font-bold px-6 py-3 rounded-xl backdrop-blur-md shadow-xl transition-all transform hover:scale-105 flex items-center space-x-2">
+                            <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+                            <span>Instant WhatsApp Booking</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-12 border-t border-gray-900 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div class="bg-brandRed text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
+                    龍
+                </div>
+                <span class="text-lg font-bold text-white tracking-wider">SHOO LOONG KAN</span>
+            </div>
+            <p class="text-sm mb-6">Chinatown Dubai Mall · Authentic Sichuan Hot Pot Experience</p>
+            <p class="text-xs text-gray-600">&copy; 2026 Shoo Loong Kan Hot Pot Dubai Mall. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
